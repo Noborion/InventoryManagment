@@ -1,0 +1,22 @@
+Log de reorganização - 19 de novembro de 2025
+
+Ações realizadas:
+- 19/11/2025 00:09: Criada pasta de backup `03_Relatorios/backup_2025-11-19`.
+- 19/11/2025 00:09: Movidos para backup:
+    • INDICE_RELATORIOS.txt (original)
+    • RELATORIO_REEXECUCAO_17_NOV_2025.txt
+    • RESUMO_VISUAL_TESTES_17_NOV.txt
+    • RESULTADO_REEXECUCAO_TESTES.txt (do root)
+    • START_HERE.txt (do root)
+    • SUMARIO_TRABALHO_17_NOV_2025.txt (do root)
+    • VERIFICACAO_FINAL_17_NOV_2025.txt (do root)
+- 19/11/2025 00:10: Criado novo `INDICE_RELATORIOS.txt` com lista curada de arquivos canônicos.
+
+Observações:
+- Todos os arquivos foram preservados no backup antes de qualquer exclusão.
+- Arquivos importantes mantidos em `03_Relatorios`:
+    RELATORIO_FINAL.txt, RELATORIO_TESTES.md, SUMARIO_TESTES.txt, LISTA_COMPLETA_TESTES.txt, resultado_testes.txt
+
+Próximos passos sugeridos:
+- Revisar `RELATORIO_FINAL.txt` e `RELATORIO_TESTES.md` para unificação final (se necessário).
+- Atualizar `ESTRUTURA.txt` para refletir nova organização.

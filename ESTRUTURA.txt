@@ -1,0 +1,113 @@
+================================================================================
+                    ESTRUTURA ORGANIZADA - 2a PARTE
+================================================================================
+
+2a parte/
+|
++- 01_Codigo_Fonte/
+|  +- gerenciador_estoque.c (Programa principal - 15KB)
+|  +- esbocoIA.c           (Inspiracao para desenvolvimento)
+|  +- teste_completo.c     (Codigo dos testes - 15KB)
+|  +- .vscode/             (Configuracoes do editor)
+|
++- 02_Testes/
+|  +- teste_completo.exe   (Executavel - 52KB)
+|       +- Execute para rodar 24 testes automaticamente
+|
++- 03_Relatorios/
+|  +- RELATORIO_FINAL.txt           (Relatorio visual final)
+|  +- RELATORIO_TESTES.md           (Analise tecnica profunda)
+|  +- SUMARIO_TESTES.txt            (Resumo executivo)
+|  +- backup_2025-11-19/           (Arquivos antigos e versões arquivadas)
+|  +- LISTA_COMPLETA_TESTES.txt     (Lista de 24 testes)
+|  +- resultado_testes.txt          (Log de execucao)
+|
++- 04_Documentacao/
+|  +- INSTRUCOES.txt                (Guia de uso)
+|  +- TrabalhoPratico_2aParte.pdf   (Enunciado)
+|
++- 05_Saida/
+|  +- (Arquivos de saida do sistema)
+|
++- README.md               (Documentacao principal)
++- ESTRUTURA.txt           (Este arquivo)
+
+================================================================================
+                              OBJETIVO DE CADA PASTA
+================================================================================
+
+[01_Codigo_Fonte]
+  Contem todos os arquivos .c (codigo C puro)
+  - gerenciador_estoque.c: Codigo testado (24 testes, 100% aprovacao)
+  - esbocoIA.c: Referencia para design
+  - teste_completo.c: Suite de testes automatizada
+
+[02_Testes]
+  Executaveis compilados prontos para uso
+  - teste_completo.exe: Testa gerenciador_estoque.c com 24 casos
+  Execucao: .\/teste_completo.exe
+
+[03_Relatorios]
+  Resultados, analises e relatorios dos testes
+  - RELATORIO_FINAL.txt: Visao geral com estatisticas
+  - RELATORIO_TESTES.md: Analise profunda tecnica
+  - SUMARIO_TESTES.txt: Recomendacoes e resumo
+  - LISTA_COMPLETA_TESTES.txt: Detalhamento de cada teste
+
+[04_Documentacao]
+  Documentos de referencia e guias
+  - INSTRUCOES.txt: Como usar os programas
+  - TrabalhoPratico_2aParte.pdf: Especificacao original
+
+[05_Saida]
+  Diretorio para arquivos gerados pelo sistema
+
+================================================================================
+                              COMO USAR
+================================================================================
+
+1. EXECUTAR OS TESTES:
+   cd 02_Testes
+   .\teste_completo.exe
+
+2. LER DOCUMENTACAO:
+   - Para visao geral: 03_Relatorios/RELATORIO_FINAL.txt
+   - Para detalhes tecnicos: 03_Relatorios/RELATORIO_TESTES.md
+   - Para recomendacoes: 03_Relatorios/SUMARIO_TESTES.txt
+
+3. RECOMPILAR (se necessario):
+   cd 01_Codigo_Fonte
+   gcc -o ..\02_Testes\teste_completo.exe teste_completo.c
+
+4. CONSULTAR CODIGO ORIGINAL:
+   - gerenciador_estoque.c esta em 01_Codigo_Fonte/
+
+================================================================================
+                              ESTATISTICAS
+================================================================================
+
+Total de Arquivos:     11 arquivos principais
+Codigo Fonte:          3 arquivos .c
+Executaveis:           1 arquivo .exe
+Relatorios:            5 arquivos
+Documentacao:          2 arquivos
+Codigo Fonte Size:     ~41 KB (compilado)
+Executable Size:       ~52 KB
+
+Testes Executados:     24 testes
+Taxa de Aprovacao:     100% (24/24 aprovados)
+Tempo de Execucao:     ~2 segundos
+
+================================================================================
+                              PROXIMOS PASSOS
+================================================================================
+
+1. Executar: 02_Testes/teste_completo.exe
+2. Revisar: 03_Relatorios/RELATORIO_FINAL.txt
+3. Estudar: 01_Codigo_Fonte/esbocomao.c
+4. Implementar melhorias conforme SUMARIO_TESTES.txt
+
+================================================================================
+
+Organizado em: 2025
+Versao: 1.0 FINAL

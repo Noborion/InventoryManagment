@@ -1,0 +1,25 @@
+Índice de Relatórios - Sneaker King (versão curada)
+
+Data da curadoria: 19 de novembro de 2025
+
+Arquivos canônicos presentes em `03_Relatorios`:
+
+- RELATORIO_FINAL.txt       -> Resumo visual e conclusão
+- RELATORIO_TESTES.md      -> Relatório técnico detalhado (Markdown)
+- SUMARIO_TESTES.txt       -> Sumário executivo
+- LISTA_COMPLETA_TESTES.txt-> Lista completa dos 24 testes
+- resultado_testes.txt     -> Log de execução dos testes (output)
+
+Arquivos arquivados em `03_Relatorios/backup_2025-11-19`:
+- INDICE_RELATORIOS.txt (original)
+- RELATORIO_REEXECUCAO_17_NOV_2025.txt
+- RESUMO_VISUAL_TESTES_17_NOV.txt
+- RESULTADO_REEXECUCAO_TESTES.txt (movido do root)
+- START_HERE.txt (movido do root)
+- SUMARIO_TRABALHO_17_NOV_2025.txt (movido do root)
+- VERIFICACAO_FINAL_17_NOV_2025.txt (movido do root)
+
+Observações:
+- Mantivemos apenas os arquivos principais de relatório para evitar duplicação.
+- Todos os arquivos removidos foram preservados em `backup_2025-11-19` caso precisem ser restaurados.
+- Próximo passo: atualizar o `README.md`/`ESTRUTURA.txt` para refletir mudanças (opcional).
