@@ -24,7 +24,7 @@ typedef struct{
 // VARIAVEIS GLOBAIS
 produto estoque[MAX_ESTOQUE];
 int total_produtos = 0;
-int i = 0;
+int i = 0, auxtam;
 
 
 // FUNÇÕES
@@ -32,6 +32,7 @@ void menu();
 void cadastrar_produto();
 void alterar_produto();
 void visualizar_estoque();
+int validacao_tamanho(int tam);
 void linha();
 void limpar_tela();
 
@@ -65,7 +66,11 @@ int main(){
                 visualizar_estoque();
                 break;
 
-            default: if (opcao>4) printf("\nOPCAO INVALIDA!\n"); break;
+            default:
+                if(opcao != 4){
+                    printf("\nOPCAO INVALIDA!\n");
+                    break;
+                }
         }
 
     }while(opcao != 4);
@@ -95,49 +100,119 @@ void cadastrar_produto(){
         printf("  Digite a marca: ");
         fgets(estoque[i].marca, sizeof(estoque[i].marca), stdin);
         estoque[i].marca[strcspn(estoque[i].marca, "\n")] = 0;
+        limpar_tela();
 
         printf("  Digite o modelo: ");
         fgets(estoque[i].modelo, sizeof(estoque[i].modelo), stdin); 
         estoque[i].modelo[strcspn(estoque[i].modelo, "\n")] = 0;
+        limpar_tela();
 
-        printf("  Digite o tamanho: ");
-        scanf("%d", &estoque[i].tamanho);
+        
+        do{
+            printf("  Digite um tamanho valido (Min: 20, Max: 50): ");
+            scanf("%d", &auxtam);
+            estoque[i].tamanho = validacao_tamanho(auxtam);
+
+        }while(estoque[i].tamanho < 20 || estoque[i].tamanho > 50);
+        limpar_tela();
 
         do{
-            printf("  Digite a quantidade: ");
+            printf("  Digite a quantidade (Min: 0, Max: 50): ");
             scanf("%d", &estoque[i].quantidade);
             if(estoque[i].quantidade < 0 || estoque[i].quantidade > MAX_POR_PROD){
-                printf("  \nQuantidade invalida! Deve ser entre 0 e %d.\n\n", MAX_POR_PROD);
+                printf("\n  Quantidade invalida! Deve ser entre 0 e %d.\n\n", MAX_POR_PROD);
             }
         }while(estoque[i].quantidade < 0 || estoque[i].quantidade > MAX_POR_PROD);
+        limpar_tela();
         estoque[i].codigo = i + 1;
         
         i++;
         total_produtos++;
 
     } else {
-        printf("\nEstoque cheio. Não é mais possível.");
+        printf("\n  Estoque cheio. Não é mais possível.");
     }
 }
 
 void alterar_produto(){
     int aux;
 
-    printf("  Digite o codigo do produto: ");
+    printf("  Digite o codigo do produto a ser alterado: ");
     scanf("%d", &aux);
 
     if(estoque[aux - 1].codigo < 0 || aux > total_produtos){
-        printf("  Codigo invalido!\n");
+        limpar_tela();
+        printf("\n  ***Codigo invalido***");
         return;
     }
     else{
+        int opcao_alterar;
+        
         do{
-            printf("  Digite a nova quantidade: ");
-            scanf("%d", &estoque[aux - 1].quantidade);
-            if(estoque[aux - 1].quantidade < 0 || estoque[aux - 1].quantidade > MAX_POR_PROD){
-                printf("\n  Quantidade invalida! Deve ser entre 0 e %d.\n\n", MAX_POR_PROD);
+            printf("\n\n  +============================================+\n");
+            printf("  |                                            |\n");
+            printf("  |   [1] Alterar marca                        |\n");
+            printf("  |   [2] Alterar modelo                       |\n");
+            printf("  |   [3] Alterar tamanho                      |\n");
+            printf("  |   [4] Alterar quantidade                   |\n");
+            printf("  |   [5] Voltar ao menu                       |\n");
+            printf("  |                                            |\n");
+            printf("  +============================================+\n\n");
+
+            printf("  >> Digite a opcao desejada: ");
+            scanf("%d", &opcao_alterar);
+            limpar_tela();
+
+            switch(opcao_alterar){
+                case 1:
+                    while (getchar() != '\n');
+                    printf("  Digite a nova marca: ");
+                    fgets(estoque[aux - 1].marca, sizeof(estoque[aux - 1].marca), stdin);
+                    estoque[aux - 1].marca[strcspn(estoque[aux - 1].marca, "\n")] = 0;
+                    limpar_tela();
+                    printf("\n  ***Marca atualizada com sucesso***");
+                    break;
+
+                case 2:
+                    while (getchar() != '\n');
+                    printf("  Digite o novo modelo: ");
+                    fgets(estoque[aux - 1].modelo, sizeof(estoque[aux - 1].modelo), stdin); 
+                    estoque[aux - 1].modelo[strcspn(estoque[aux - 1].modelo, "\n")] = 0;
+                    limpar_tela();
+                    printf("\n  ***Modelo atualizado com sucesso***");
+                    break;
+
+                case 3:
+                    do{
+                        printf("  Digite o novo tamanho (Min: 20, Max: 50): ");
+                        scanf("%d", &auxtam);
+                        estoque[aux - 1].tamanho = validacao_tamanho(auxtam);
+
+                    }while(estoque[aux - 1].tamanho < 20 || estoque[aux - 1].tamanho > 50);
+                    limpar_tela();
+                    printf("\n  ***Tamanho atualizado com sucesso***");
+                    break;
+
+                case 4:
+                    do{
+                        printf("  Digite a nova quantidade (Min: 0, Max: 50): ");
+                        scanf("%d", &estoque[aux - 1].quantidade);
+                        if(estoque[aux - 1].quantidade < 0 || estoque[aux - 1].quantidade > MAX_POR_PROD){
+                            printf("\n  Quantidade invalida! Deve ser entre 0 e %d.\n\n", MAX_POR_PROD);
+                        }
+                    }while(estoque[aux - 1].quantidade < 0 || estoque[aux - 1].quantidade > MAX_POR_PROD);
+                    limpar_tela();
+                    printf("\n  ***Quantidade atualizada com sucesso***");
+                    break;
+                    
+                default:
+                    if(opcao_alterar != 5){
+                        printf("  Opcao invalida!\n");
+                        break;
+                    }
             }
-        }while(estoque[aux - 1].quantidade < 0 || estoque[aux - 1].quantidade > MAX_POR_PROD);
+        }while(opcao_alterar != 5);
+        
     }
 
 }
@@ -158,6 +233,16 @@ void visualizar_estoque(){
         else{
             printf("  %d| %s | %s | %d | %d unid. |\n", estoque[j].codigo, estoque[j].marca, estoque[j].modelo, estoque[j].tamanho, estoque[j].quantidade);
         }
+    }
+}
+
+int validacao_tamanho(int tam){
+    if(tam < 20 || tam > 50){
+        printf("  \nTamanho invalido! Deve ser entre 20 e 50.\n\n");
+        return tam;
+    }
+    else{
+        return tam;
     }
 }
 
