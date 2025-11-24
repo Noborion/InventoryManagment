@@ -1,1 +1,81 @@
-03_Relatorios/backup_2025-11-19/
+# ============================================================
+# BACKUP FOLDERS - Ignore all legacy and backup directories
+# ============================================================
+/03_Relatorios/backup_*/
+/build/backup_*/
+/build/backup_before_move/
+/build/backup_final_legado/
+/01_Codigo_Fonte/
+
+# ============================================================
+# BUILD ARTIFACTS AND EXECUTABLES
+# ============================================================
+*.exe
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.dll
+
+# Compilation outputs
+/src/*.exe
+/tests/*.exe
+/build/**/*.exe
+
+# Generated executables
+gerenciador_estoque.exe
+gerenciador.exe
+tests_gerenciador.exe
+teste_completo.exe
+
+# ============================================================
+# OUTPUT AND TEMPORARY FILES
+# ============================================================
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# OS temporary files
+.DS_Store
+Thumbs.db
+*.tmp.*
+
+# ============================================================
+# EDITOR AND IDE DIRECTORIES
+# ============================================================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.code-workspace
+
+# ============================================================
+# VISUAL STUDIO / BUILD DIRECTORIES
+# ============================================================
+.vs/
+Debug/
+Release/
+x64/
+x86/
+
+# ============================================================
+# CUSTOM PROJECT EXCLUSIONS
+# ============================================================
+Relatório_Trabalho_De_InCom.docx
+
+# ============================================================
+# NOTES
+# ============================================================
+# The project structure is organized as:
+# - src/          (código-fonte)
+# - tests/        (testes)
+# - reports/      (relatórios finais)
+# - docs/         (documentação)
+# - scripts/      (scripts de automação)
+# - build/        (binários e backups)
+#
+# Old folders backed up in build/backup_final_legado/ for recovery.

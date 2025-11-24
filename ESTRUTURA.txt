@@ -6,7 +6,7 @@
 |
 +- 01_Codigo_Fonte/
 |  +- gerenciador_estoque.c (Programa principal - 15KB)
-|  +- esbocoIA.c           (Inspiracao para desenvolvimento)
+|  +- ai_prototype.c        (Inspiracao para desenvolvimento)
 |  +- teste_completo.c     (Codigo dos testes - 15KB)
 |  +- .vscode/             (Configuracoes do editor)
 |
@@ -39,7 +39,7 @@
 [01_Codigo_Fonte]
   Contem todos os arquivos .c (codigo C puro)
   - gerenciador_estoque.c: Codigo testado (24 testes, 100% aprovacao)
-  - esbocoIA.c: Referencia para design
+  - ai_prototype.c: Referencia para design
   - teste_completo.c: Suite de testes automatizada
 
 [02_Testes]

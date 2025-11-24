@@ -4,7 +4,7 @@
 ESTRUTURA/
 ├── 01_Codigo_Fonte/          ← Código fonte dos programas
 │   ├── gerenciador_estoque.c (Programa principal testado)
-│   ├── esbocoIA.c            (Inspiração - não testado)
+│   ├── ai_prototype.c         (Inspiração - não testado)
 │   └── teste_completo.c      (Código dos testes)
 │
 ├── 02_Testes/                ← Executáveis dos testes

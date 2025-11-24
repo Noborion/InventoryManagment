@@ -1,0 +1,6 @@
+## SUMÁRIO EXECUTIVO DE TESTES (COPIA)
+Gerado: 24 de novembro de 2025
+
+Este arquivo contém uma cópia consolidada dos sumários de testes existentes, movidos para `reports/`.
+
+Consulte os arquivos individuais em `reports/` para detalhes completos.

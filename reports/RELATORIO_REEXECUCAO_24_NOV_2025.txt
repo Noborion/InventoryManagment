@@ -1,0 +1,28 @@
+RELATÓRIO DE REEXECUÇÃO DE TESTES - 24 de novembro de 2025
+GERENCIADOR DE ESTOQUE - Sneaker King
+
+Resumo:
+- Arquivo de teste: 02_Testes/tests_gerenciador.c (suíte não-interativa)
+- Objetivo: Verificação rápida de consistência das estruturas internas do gerenciador (não-interativa)
+- Ambiente: Windows PowerShell, gcc
+
+Resultados:
+- Compilação: Sucesso (foram exibidos warnings não-críticos durante a compilação)
+- Execução: Sucesso
+- Testes executados: 11
+- Testes aprovados: 11/11 (100%)
+
+Observações técnicas:
+- Durante a compilação apareceu um warning de "array subscript above array bounds" originado por um caso de teste que intencionalmente chamou um índice fora do intervalo para validar comportamento de proteção. Apesar do warning, não houve falha nos testes.
+- A suíte de testes manipula diretamente as estruturas de dados internas do gerenciador e não invoca rotinas interativas. Ela serve como complemento à suíte principal.
+
+Recomendações:
+- Revisar e fortalecer validações de índice nas funções que atualizam produtos (evitar acesso fora de limites).
+- Unificar casos de teste entre as duas suítes (teste_completo.c e tests_gerenciador.c) para evitar duplicação e manter métricas consolidadas.
+- Implementar validação de quantidade (quantidade >= 0) e validar intervalo de tamanho (20-50) conforme recomendado nos relatórios anteriores.
+
+Conclusão:
+A reexecução rápida confirmou comportamento consistente nas verificações automatizadas adicionais. Não foram detectados erros críticos nesta execução.
+
+Gerado em: 24 de novembro de 2025
+Por: Suíte de Testes Automatizada
