@@ -137,12 +137,16 @@ void cadastrar_produto(){
 void alterar_produto(){
     int aux;
 
-    printf("  Digite o codigo do produto a ser alterado: ");
+    printf("  Digite o codigo do produto a ser alterado (Para sair digite: 0): ");
     scanf("%d", &aux);
 
-    if(estoque[aux - 1].codigo < 0 || aux > total_produtos){
+    if(aux < 0 || aux > total_produtos){
         limpar_tela();
         printf("\n  ***Codigo invalido***");
+        return;
+    }
+    else if(aux == 0){
+        limpar_tela();
         return;
     }
     else{
@@ -212,9 +216,7 @@ void alterar_produto(){
                     }
             }
         }while(opcao_alterar != 5);
-        
     }
-
 }
 
 void visualizar_estoque(){
