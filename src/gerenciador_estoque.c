@@ -57,8 +57,6 @@ int main(){
                 break;
 
             case 2:
-                visualizar_estoque();
-                printf("\n\n");
                 alterar_produto();
                 break;
 
@@ -137,6 +135,9 @@ void cadastrar_produto(){
 void alterar_produto(){
     int aux;
 
+    visualizar_estoque();
+    printf("\n\n");
+
     printf("  Digite o codigo do produto a ser alterado (Para sair digite: 0): ");
     scanf("%d", &aux);
 
@@ -153,6 +154,10 @@ void alterar_produto(){
         int opcao_alterar;
         
         do{
+            limpar_tela();
+            visualizar_estoque();
+            
+
             printf("\n\n  +============================================+\n");
             printf("  |                                            |\n");
             printf("  |   [1] Alterar marca                        |\n");
